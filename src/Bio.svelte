@@ -46,44 +46,57 @@
                             </a>
                         </div>
 
-                        <div class="contact-icon-tray">
+                        <div class="buttons contact-icon-tray">
                             <a
                             target="_blank"
+                            class='button is-ghost'
                             href="https://www.linkedin.com/in/shaik-azeez-ahmed-7254b1a3/">
-                            <SvelteTooltip tip="visit LinkedIn profile" bottom >
-                                <LinkedinIcon class="btn-icon nav-btn-icon" size="20" />
-                            </SvelteTooltip>
+                            <span class="icon">
+                                <SvelteTooltip tip="visit LinkedIn profile" bottom color="hsl(0, 0%, 93%)">
+                                    <LinkedinIcon class="btn-icon nav-btn-icon" size="20" />
+                                </SvelteTooltip>
+                            </span>
                             </a>
                             
                             <a 
                                 target="_blank"
+                                class='button is-ghost'
                                 href="https://github.com/azeez-infrrd">
-                                <SvelteTooltip tip="visit Github profile" bottom >
-                                    <GithubIcon class="btn-icon nav-btn-icon" size="20" />
-                                </SvelteTooltip>
-                                
+                                <span class="icon">
+                                    <SvelteTooltip tip="visit Github profile" bottom color="hsl(0, 0%, 93%)">
+                                        <GithubIcon class="btn-icon nav-btn-icon" size="20" />
+                                    </SvelteTooltip>
+                                </span>
                             </a>
             
                             <a
                                 target="_blank" 
+                                class='button is-ghost'
                                 href="https://www.instagram.com/thiz_is_zi/">
-                                <SvelteTooltip tip="visit Instagram profile" bottom >
-                                    <InstagramIcon class="btn-icon nav-btn-icon" size="20" />
-                                </SvelteTooltip>
+                                <span class="icon">
+                                    <SvelteTooltip tip="visit Instagram profile" bottom color="hsl(0, 0%, 93%)">
+                                        <InstagramIcon class="btn-icon nav-btn-icon" size="20" />
+                                    </SvelteTooltip>
+                                </span>
                             </a>
             
                             
                             <a
+                                class='button is-ghost'
                                 href="mailto:azizahmed648@gmail.com">
-                                <SvelteTooltip tip="send Email" bottom >
-                                    <MailIcon class="btn-icon nav-btn-icon" size="20" />
-                                </SvelteTooltip>
+                                <span class="icon">
+                                    <SvelteTooltip tip="send Email" bottom color="hsl(0, 0%, 93%)">
+                                        <MailIcon class="btn-icon nav-btn-icon" size="20" />
+                                    </SvelteTooltip>
+                                </span>
                             </a>
 
-                            <a href="/resume.pdf" class='has-text-light download-link' download="Resume: Shaik Azeez Ahmed">
-                                <SvelteTooltip tip="Download resume" bottom >
-                                    <DownloadIcon class='btn-icon nav-btn-icon' size='20'/>
-                                </SvelteTooltip>
+                            <a href="/resume.pdf" class='button is-ghost download-link' download="Resume: Shaik Azeez Ahmed">
+                                <span class="icon">
+                                    <SvelteTooltip tip="Download resume" bottom color="hsl(0, 0%, 93%)">
+                                        <DownloadIcon class='btn-icon nav-btn-icon' size='20'/>
+                                    </SvelteTooltip>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -169,15 +182,32 @@
     }
 
     .contact-icon-tray {
-        display: flex;
-        justify-content: center;
         margin-top: 2rem;
-        a {
-            color: $grey-lightest;
-            margin: 0 2rem;
-        }
+        justify-content: center;
+
         @include from($tablet) {
-            max-width: 80%;
+            justify-content: flex-start;
+        }
+
+        .button {
+            color: $grey-lightest;
+            &:hover, &:focus {
+                background-color: $grey-lightest;
+                color: $grey-dark;
+            }
+            &:focus {
+                outline: 1px solid $grey-lightest;
+            }
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            @include from($tablet) {
+                &:not(:last-child) {
+                    margin-right: 4rem;
+                }
+            }
         }
     }
 

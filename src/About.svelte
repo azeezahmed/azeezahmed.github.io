@@ -109,6 +109,9 @@
     }
 
     .section {
+        @include mobile {
+            padding-top: 4rem;
+        }
         @include from($mobile) {
             padding-top: 5rem;
         }
@@ -169,7 +172,11 @@
         justify-content: center;
         flex-basis: 100%;
         border-top: 1px solid $grey-lighter;
-        padding: 2rem;
+        padding: 1rem;
         align-items: baseline;
+
+        @include from($mobile) {
+            padding: 2rem;
+        }
     }
 </style>

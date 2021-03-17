@@ -124,4 +124,9 @@
         color: $grey-lightest
     }
 
+    .navbar-item:focus {
+        outline: 1px solid $grey-lightest;
+        outline-offset: -2px;
+    }
+
 </style>
