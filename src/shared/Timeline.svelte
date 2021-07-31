@@ -1,5 +1,15 @@
 <script>
-    export let timelineEntries = { }
+    import DetailsCard from './DetailsCard.svelte'
+    export let timelineEntries = []
+    export let showMonthStamp = false
+
+    let DetailsCardHandler;
+    let currentProjectDetails = timelineEntries[0]
+    
+    function handleProjectCardOpen(projectDetails) {
+        currentProjectDetails = projectDetails
+        DetailsCardHandler.open()
+    }
 </script>
 
 <div class="timeline-container">
@@ -8,13 +18,15 @@
             <h1 class="is-size-3 pl-4 pt-6">{timelineEntry.year}</h1>
             {#each timelineEntry.details as detail}
                 <div class="detail-item">
-                    <div id='test' class="box">
+                    <div on:click={handleProjectCardOpen(detail)} class="box">
                         <p class="description has-text-weight-semibold">
                             {detail.title}
                         </p>
-                        <p class="description has-text-weight-semibold">
-                            {detail.monthStamp}
-                        </p>
+                        {#if showMonthStamp}
+                            <p class="description-month has-text-weight-semibold">
+                                {detail.monthStamp}
+                            </p>
+                        {/if}
                     </div>
                     <div class="timeline-link"></div>
                 </div>
@@ -22,6 +34,8 @@
         {/each}
     </div>
 </div>
+
+<DetailsCard bind:this={DetailsCardHandler} cardDetails={currentProjectDetails}/>
 
 <style type='text/scss'>
 
@@ -86,7 +100,7 @@
             }
             border-top: 2px dotted grey;
             position: absolute;
-            min-width: 6rem;
+            min-width: 2.5rem;
             top: 1.3rem;
         }
 
@@ -95,11 +109,12 @@
             display: flex;
             justify-content: space-between;
             background-color: $grey-darker;
-            margin-left: 5rem;
-            margin-bottom: 0.4rem;
+            margin-left: 3rem;
+            margin-bottom: 1rem;
             color: $grey-lighter;
             padding: 0.6rem 1.25rem;
             z-index: 1;
+
 
             &:hover {
                 background: $grey-light;

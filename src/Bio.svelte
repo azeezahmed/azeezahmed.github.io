@@ -1,9 +1,10 @@
 <script>
     import Layout from './shared/Layout.svelte';
     import SvelteTooltip from 'svelte-tooltip';
+    import { totalExperience } from './globalStore.js';
     import { ToolIcon, ArchiveIcon, UserIcon,
              LinkedinIcon, GithubIcon, InstagramIcon,
-             MailIcon, DownloadIcon } from 'svelte-feather-icons'
+             MailIcon, DownloadIcon } from 'svelte-feather-icons';
 </script>
 
 <Layout hostComponent={'bio'} showHeader={false} gradientBg={true}>
@@ -24,10 +25,10 @@
                             Shaik Azeez Ahmed
                         </h1>
                         <h2 class="subtitle is-spaced">
-                            Full-Stack Developer
+                            Full-Stack Engineer
                         </h2>
                         <h3 class="subtitle is-spaced is-italic">
-                            Software Engineer with 5+ years of experience in building platform web applications
+                            {$totalExperience}+ years of experience in building web applications
                             for both private and public sector
                         </h3>
 

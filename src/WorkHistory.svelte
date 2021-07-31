@@ -16,5 +16,5 @@
 
 
 <Layout hostComponent={'workHistory'}>
-    <Timeline timelineEntries={workTimeline}></Timeline>
+    <Timeline showMonthStamp={true} timelineEntries={workTimeline}></Timeline>
 </Layout>
