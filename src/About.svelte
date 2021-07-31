@@ -1,33 +1,33 @@
 <script>
     import Layout from './shared/Layout.svelte'
     import { DownloadIcon } from 'svelte-feather-icons'
+    import { totalExperience } from './globalStore.js'
 </script>
 
 <Layout gradientBg={true} hostComponent={'about'}>
-    <section class='section'>
+    <section class='section section-scrollable'>
         <div class="columns is-centered">
             <div class="column lhs-detail-column">
                 <div class="columns">
                     <div class="column">
-                        <h1 class="title">
+                        <h4 class="title is-4">
                             Shaik Azeez Ahmed
-                        </h1>
-                        <h2 class="subtitle is-spaced">
-                            Full-Stack Developer
-                        </h2>
+                        </h4>
+                        <h5 class="subtitle is-6 is-spaced">
+                            Full-Stack Engineer
+                        </h5>
                         <p class="is-size-6-tablet">
-                            Software Engineer with 5+ years of experience in building platform web applications
-                            for both private and public sector
+                            I specialize in MVC based micro-services, whitelabelled web-applications and web accessibility.
                         </p>
                         <br>
                         <p class="is-size-6-tablet">
-                            I specialize in MVC based micro-services, whitelabelled applications and web accessibility.
+                            My current interests are UX design-systems and delivery workflows.
                             I enjoy developing simple and clever solutions to complex problems.
                         </p>
                         <br>
                         <p class="is-size-6-tablet">
-                            When I'm not writing code, you can find me on my musical instruments,
-                            taking a solo trip or simply having a brunch out with friends and family.
+                            When I'm not writing code, I spend my time on my guitar, gaming rig or
+                            simply having a brunch out with friends and family.
                         </p>
                     </div>
                 </div>
@@ -52,6 +52,14 @@
                                     <tr>
                                         <td class="has-text-weight-semibold">Frontend:</td>
                                         <td>Angular, React, Vue, Svelte</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="has-text-weight-semibold">Current role:</td>
+                                        <td>Technical specialist</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="has-text-weight-semibold">Total experience:</td>
+                                        <td>{$totalExperience} yrs</td>
                                     </tr>
                                     <tr>
                                         <td class="has-text-weight-semibold">Nationality:</td>
@@ -113,7 +121,7 @@
             padding-top: 4rem;
         }
         @include from($mobile) {
-            padding-top: 5rem;
+            padding-top: 3rem;
         }
     }
     @include from($tablet) {
@@ -147,7 +155,7 @@
         margin-top: 0.5rem;
     }
     
-    h1.title {
+    .title {
         letter-spacing: 0.06rem;
         color: #e8eef2;
         font-family: trebuchet ms, sans-serif;
@@ -166,7 +174,7 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        background: $grey-darker;
+        background: $black-ter;
         display: flex;
         flex-grow: 1;
         justify-content: center;

@@ -9,7 +9,6 @@
 </script>
 
 <Router url="{url}">
-	  <!-- <Route path="blog/:id" component="{BlogPost}" /> -->
 	  <Route path="projects" component="{Projects}" />
 	  <Route path="workHistory" component="{WorkHistory}" />
 	  <Route path="about" component="{About}" />
@@ -42,4 +41,10 @@
 	:global(.tooltip) {
         z-index: 1;
     }
+
+	@include until($tablet) {
+		p {
+			font-size: 12px;
+		}
+	}
 </style>
