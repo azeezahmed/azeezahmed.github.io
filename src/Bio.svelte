@@ -1,18 +1,25 @@
 <script>
-    import Layout from './shared/Layout.svelte';
-    import SvelteTooltip from 'svelte-tooltip';
-    import { totalExperience } from './globalStore.js';
-    import { ToolIcon, ArchiveIcon, UserIcon,
-             LinkedinIcon, GithubIcon, InstagramIcon,
-             MailIcon, DownloadIcon } from 'svelte-feather-icons';
+    import Layout from "./shared/Layout.svelte";
+    import SvelteTooltip from "svelte-tooltip";
+    import { totalExperience } from "./globalStore.js";
+    import {
+        ToolIcon,
+        ArchiveIcon,
+        UserIcon,
+        LinkedinIcon,
+        GithubIcon,
+        InstagramIcon,
+        MailIcon,
+        DownloadIcon,
+    } from "svelte-feather-icons";
 </script>
 
-<Layout hostComponent={'bio'} showHeader={false} gradientBg={true}>
+<Layout hostComponent={"bio"} showHeader={false} gradientBg={true}>
     <div class="section">
         <div class="columns is-flex-mobile is-hidden-tablet is-centered">
             <div class="column is-full">
                 <div class="profile-container">
-                    <div class='profile-pic'></div>
+                    <div class="profile-pic" />
                 </div>
             </div>
         </div>
@@ -21,27 +28,32 @@
             <div class="column lhs-detail-column">
                 <div class="columns">
                     <div class="column">
-                        <h1 class="title">
-                            Shaik Azeez Ahmed
-                        </h1>
-                        <h2 class="subtitle is-spaced">
-                            Full-Stack Engineer
-                        </h2>
+                        <h1 class="title">Shaik Azeez Ahmed</h1>
+                        <h2 class="subtitle is-spaced">Full-Stack Engineer</h2>
                         <h3 class="subtitle is-spaced is-italic">
-                            {$totalExperience}+ years of experience in building web applications
-                            for both private and public sector
+                            {$totalExperience}+ years of experience in building
+                            web applications for both private and public sector
                         </h3>
 
                         <div class="buttons mt-6">
-                            <a href="projects" class="button is-fullwidth-mobile is-medium is-light hvr-sweep-to-top">
+                            <a
+                                href="projects"
+                                class="button is-fullwidth-mobile is-medium is-light hvr-sweep-to-top"
+                            >
                                 <span>Projects</span>
                                 <ToolIcon class="btn-icon ml-1" size="20" />
                             </a>
-                            <a href="workHistory" class="button is-fullwidth-mobile is-medium is-light hvr-sweep-to-top">
+                            <a
+                                href="workHistory"
+                                class="button is-fullwidth-mobile is-medium is-light hvr-sweep-to-top"
+                            >
                                 <span>Work History</span>
                                 <ArchiveIcon class="btn-icon ml-1" size="20" />
                             </a>
-                            <a href="about" class="button is-fullwidth-mobile is-medium is-light hvr-sweep-to-top">
+                            <a
+                                href="about"
+                                class="button is-fullwidth-mobile is-medium is-light hvr-sweep-to-top"
+                            >
                                 <span>About</span>
                                 <UserIcon class="btn-icon ml-1" size="20" />
                             </a>
@@ -49,53 +61,95 @@
 
                         <div class="buttons contact-icon-tray">
                             <a
-                            target="_blank"
-                            class='button is-ghost'
-                            href="https://www.linkedin.com/in/shaik-azeez-ahmed-7254b1a3/">
-                            <span class="icon">
-                                <SvelteTooltip tip="visit LinkedIn profile" bottom color="hsl(0, 0%, 93%)">
-                                    <LinkedinIcon class="btn-icon nav-btn-icon" size="20" />
-                                </SvelteTooltip>
-                            </span>
-                            </a>
-                            
-                            <a 
                                 target="_blank"
-                                class='button is-ghost'
-                                href="https://github.com/azeez-infrrd">
+                                class="button is-ghost"
+                                href="https://www.linkedin.com/in/shaik-azeez-ahmed-7254b1a3/"
+                            >
                                 <span class="icon">
-                                    <SvelteTooltip tip="visit Github profile" bottom color="hsl(0, 0%, 93%)">
-                                        <GithubIcon class="btn-icon nav-btn-icon" size="20" />
-                                    </SvelteTooltip>
-                                </span>
-                            </a>
-            
-                            <a
-                                target="_blank" 
-                                class='button is-ghost'
-                                href="https://www.instagram.com/thiz_is_zi/">
-                                <span class="icon">
-                                    <SvelteTooltip tip="visit Instagram profile" bottom color="hsl(0, 0%, 93%)">
-                                        <InstagramIcon class="btn-icon nav-btn-icon" size="20" />
-                                    </SvelteTooltip>
-                                </span>
-                            </a>
-            
-                            
-                            <a
-                                class='button is-ghost'
-                                href="mailto:azizahmed648@gmail.com">
-                                <span class="icon">
-                                    <SvelteTooltip tip="send Email" bottom color="hsl(0, 0%, 93%)">
-                                        <MailIcon class="btn-icon nav-btn-icon" size="20" />
+                                    <SvelteTooltip
+                                        tip="visit LinkedIn profile"
+                                        bottom
+                                        color="hsl(0, 0%, 93%)"
+                                    >
+                                        <LinkedinIcon
+                                            class="btn-icon nav-btn-icon"
+                                            size="20"
+                                        />
                                     </SvelteTooltip>
                                 </span>
                             </a>
 
-                            <a href="/resume.pdf" class='button is-ghost download-link' download="Resume: Shaik Azeez Ahmed">
+                            <a
+                                target="_blank"
+                                class="button is-ghost"
+                                href="https://github.com/shaik-azeez-infrrd"
+                            >
                                 <span class="icon">
-                                    <SvelteTooltip tip="Download resume" bottom color="hsl(0, 0%, 93%)">
-                                        <DownloadIcon class='btn-icon nav-btn-icon' size='20'/>
+                                    <SvelteTooltip
+                                        tip="visit Github profile"
+                                        bottom
+                                        color="hsl(0, 0%, 93%)"
+                                    >
+                                        <GithubIcon
+                                            class="btn-icon nav-btn-icon"
+                                            size="20"
+                                        />
+                                    </SvelteTooltip>
+                                </span>
+                            </a>
+
+                            <a
+                                target="_blank"
+                                class="button is-ghost"
+                                href="https://www.instagram.com/thiz_is_zi/"
+                            >
+                                <span class="icon">
+                                    <SvelteTooltip
+                                        tip="visit Instagram profile"
+                                        bottom
+                                        color="hsl(0, 0%, 93%)"
+                                    >
+                                        <InstagramIcon
+                                            class="btn-icon nav-btn-icon"
+                                            size="20"
+                                        />
+                                    </SvelteTooltip>
+                                </span>
+                            </a>
+
+                            <a
+                                class="button is-ghost"
+                                href="mailto:azizahmed648@gmail.com"
+                            >
+                                <span class="icon">
+                                    <SvelteTooltip
+                                        tip="send Email"
+                                        bottom
+                                        color="hsl(0, 0%, 93%)"
+                                    >
+                                        <MailIcon
+                                            class="btn-icon nav-btn-icon"
+                                            size="20"
+                                        />
+                                    </SvelteTooltip>
+                                </span>
+                            </a>
+
+                            <a
+                                href="/resume.pdf"
+                                class="button is-ghost download-link"
+                                download="Resume: Shaik Azeez Ahmed"
+                            >
+                                <span class="icon">
+                                    <SvelteTooltip
+                                        tip="Download resume"
+                                        bottom
+                                        color="hsl(0, 0%, 93%)"
+                                    >
+                                        <DownloadIcon
+                                            class="btn-icon nav-btn-icon"
+                                            size="20"
+                                        />
                                     </SvelteTooltip>
                                 </span>
                             </a>
@@ -103,21 +157,19 @@
                     </div>
                     <div class="column is-hidden-mobile is-4">
                         <div class="profile-container">
-                            <div class='profile-pic'></div>
+                            <div class="profile-pic" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </Layout>
 
-
-<style type='text/scss'>
-
+<style type="text/scss">
     @include until($tablet) {
-        .title, .subtitle {
+        .title,
+        .subtitle {
             text-align: center;
         }
         .buttons {
@@ -160,11 +212,13 @@
         }
     }
 
-    h1.title, h2.subtitle, h3.subtitle {
+    h1.title,
+    h2.subtitle,
+    h3.subtitle {
         color: $grey-lightest;
         font-family: trebuchet ms, sans-serif;
     }
-    
+
     .profile-container {
         .profile-pic {
             height: 20rem;
@@ -179,7 +233,7 @@
     }
 
     .button {
-        text-decoration: none;        
+        text-decoration: none;
     }
 
     .contact-icon-tray {
@@ -192,7 +246,8 @@
 
         .button {
             color: $grey-lightest;
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 background-color: $grey-lightest;
                 color: $grey-dark;
             }
@@ -247,11 +302,15 @@
         transition-timing-function: ease-out;
     }
 
-    .hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active {
+    .hvr-sweep-to-top:hover,
+    .hvr-sweep-to-top:focus,
+    .hvr-sweep-to-top:active {
         color: white;
     }
 
-    .hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before {
+    .hvr-sweep-to-top:hover:before,
+    .hvr-sweep-to-top:focus:before,
+    .hvr-sweep-to-top:active:before {
         -webkit-transform: scaleY(1);
         transform: scaleY(1);
     }
