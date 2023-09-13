@@ -32,11 +32,7 @@
     });
 </script>
 
-<nav
-    class="navbar is-fixed-top is-dark"
-    role="navigation"
-    aria-label="main navigation"
->
+<nav class="navbar" role="navigation" aria-label="main navigation">
     {#if showBrand}
         <div class="navbar-brand is-size-4">
             <a class="navbar-item" href="/">
@@ -112,6 +108,13 @@
 </nav>
 
 <style type="text/scss">
+    .navbar {
+        background-color: #2c3e50;
+        left: 0;
+        position: sticky;
+        right: 0;
+        z-index: 30;
+    }
     .navbar-end {
         display: flex;
         @include from($tablet) {
@@ -122,7 +125,7 @@
     .navbar-item,
     .navbar-menu {
         color: $grey-lightest;
-        background-color: $grey-darker;
+        background-color: #2c3e50;
     }
 
     @include from($mobile) {
@@ -133,7 +136,7 @@
 
     .navbar-item:hover,
     .navbar-item:focus {
-        background-color: #292929;
+        background-color: #3498db;
         color: $grey-lightest;
     }
 

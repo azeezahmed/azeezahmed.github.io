@@ -15,6 +15,6 @@
 </script>
 
 
-<Layout hostComponent={'workHistory'}>
+<Layout gradientBg={true} hostComponent={'workHistory'}>
     <Timeline showMonthStamp={true} timelineEntries={workTimeline}></Timeline>
 </Layout>
