@@ -28,11 +28,14 @@
             <div class="column lhs-detail-column">
                 <div class="columns">
                     <div class="column">
-                        <h1 class="title">Shaik Azeez Ahmed</h1>
-                        <h2 class="subtitle is-spaced">Full-Stack Engineer</h2>
+                        <h1 class="title">Hello, I'm Azeez</h1>
+                        <h2 class="subtitle is-spaced">
+                            A Full-Stack Engineer
+                        </h2>
                         <h3 class="subtitle is-spaced is-italic">
-                            {$totalExperience}+ years of experience in building
-                            web applications for both private and public sector
+                            with over {$totalExperience} years of dedicated expertise
+                            in full-stack engineering, crafting digital solutions
+                            for startups and large scale enterprises
                         </h3>
 
                         <div class="buttons mt-6">
@@ -167,6 +170,9 @@
 </Layout>
 
 <style type="text/scss">
+    .section {
+        min-height: 100vh;
+    }
     @include until($tablet) {
         .title,
         .subtitle {
@@ -273,7 +279,6 @@
         vertical-align: middle;
         -webkit-transform: perspective(1px) translateZ(0);
         transform: perspective(1px) translateZ(0);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
         position: relative;
         -webkit-transition-property: color;
         transition-property: color;
@@ -289,7 +294,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: $grey-darker;
+        background: #2c3e50;
         -webkit-transform: scaleY(0);
         transform: scaleY(0);
         -webkit-transform-origin: 50% 100%;
@@ -300,6 +305,7 @@
         transition-duration: 0.3s;
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
+        border-radius: 4px;
     }
 
     .hvr-sweep-to-top:hover,
